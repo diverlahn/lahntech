@@ -121,7 +121,12 @@
     /* simple reveal on scroll */
     [data-reveal]{opacity:0;transform:translateY(16px);transition:all .6s ease}
     [data-reveal].in{opacity:1;transform:none}
-  </style>
+    /* WA FLOAT */
+    .wa-float{position:fixed;right:18px;bottom:18px;z-index:120;display:inline-flex;align-items:center;justify-content:center}
+    .wa-float img{width:64px;height:64px;border-radius:999px;box-shadow:var(--shadow);border:1px solid #1b2333;image-rendering:-webkit-optimize-contrast}
+    .wa-float:hover{transform:translateY(-1px)}
+    @media (max-width:640px){.wa-float img{width:56px;height:56px}.wa-float{right:14px;bottom:14px}}
+</style>
 </head>
 <body>
   <!-- NAV -->
@@ -473,5 +478,10 @@
       }
     });
   </script>
+  <!-- WhatsApp Floating Button -->
+  <a class="wa-float" href="https://wa.me/5511987562810?text=Ol%C3%A1%20Lahntech!%20Vim%20da%20landing%20e%20gostaria%20de%20saber%20mais." target="_blank" rel="noopener" aria-label="Abrir conversa no WhatsApp">
+    <!-- Troque o src abaixo pelo seu GIF preferido -->
+    <img src="/assets/whatsapp-float.gif" alt="WhatsApp" onerror="this.src='https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg'; this.style.background='#1fa855'; this.style.padding='10px'; this.style.borderRadius='999px';"/>
+  </a>
 </body>
 </html>
